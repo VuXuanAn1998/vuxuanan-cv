@@ -2,7 +2,6 @@ import React from 'react'
 import Button from '../../components/Button/Button'
 import './home.scss'
 import { Link } from 'react-router-dom'
-import Portfolio from './../Portfolio/Portfolio';
 
 const Home = () => {
   window.scrollTo(0, 0)
@@ -18,10 +17,15 @@ const Home = () => {
         <div className="home__text">
           <div className="home__text-wrap">
             <h1>Hello, I'm
-              <span>La Phuoc Loc</span>
+              <span>Vu Xuan An</span>
             </h1>
             <p>
-              初めまして！中央情報専門学校IT・WEB学科のロックと申します。ベトナムのホーチミン市の出身です。趣味はギター弾き語りで日本の歌を歌うことです。よろしくお願いいたします！
+              Nice to meet you! My name is Xuan An. I'm a front-end developer with over two years of experience in web
+              development, specializing in creating intuitive and engaging user
+              interfaces. With a strong foundation in UX/UI design, I enjoy solving
+              complex problems and crafting seamless user experiences. I'm
+              committed to continuous learning, exploring new technologies, and
+              adopting best practices to grow as an engineer.
             </p>
             <Button
               className="portfolio-btn"

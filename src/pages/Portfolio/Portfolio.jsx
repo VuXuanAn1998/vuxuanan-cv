@@ -26,7 +26,7 @@ const portfolio = [
     source: 'https://github.com/LaPhuocLoc/MyFoodie2',
     // preview: 'https://rokku-food.netlify.app/',
     video: 'https://www.youtube.com/watch?v=rx-fLzNr1eM',
-    tags: ['git', 'ui / ux', 'css', 'bootstrap', 'responsive', 'javascript', 'web api', 'web app', 'food', 'travel']
+    tags: ['personal']
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const portfolio = [
     source: 'https://github.com/LaPhuocLoc/movie-app',
     // preview: 'https://rokku-movie.netlify.app/',
     video: 'https://youtu.be/EwX2gFZFobA',
-    tags: ['react', 'scss', 'responsive', 'web api', 'axios', 'movie', 'web app']
+    tags: ['professional']
   },
   {
     id: 3,
@@ -55,66 +55,7 @@ const portfolio = [
     source: 'https://github.com/LaPhuocLoc/landing-page',
     // preview: 'https://rokku-game.netlify.app/',
     video: 'https://youtu.be/Agv30p2llrU',
-    tags: ['react', 'scss', 'vitejs', 'animation', 'game landing page', 'web design']
-  },
-  {
-    id: 4,
-    thumbUrl: [portfolio1, portfolio2, portfolio3, portfolio4],
-    date: '2022月3月25日2022月4月1日',
-    title: 'My Portfolio',
-    description: 'このWebページです。HTMLとCSS(SASS),ReactJSを使用し、シングルページアプリケーションに仕上げました。これまでに手がけた制作物、身につけたスキルをまとめています。',
-    role: 'フロントエンド',
-    frontend: ['SCSS', 'React'],
-    backend: 'なし',
-    source: 'https://github.com/LaPhuocLoc/react-portfolio',
-    // preview: 'https://rokku.netlify.app/',
-    video: 'なし',
-    tags: ['react', 'scss', 'ui/ux', 'responsive', 'animation', 'portfolio', 'web design']
-  },
-  {
-    id: 5,
-    thumbUrl: [ec1, ec2, ec3, ec4],
-
-    date: '2022年4月ー未定',
-    title: 'E-Commerce Store(未完成)',
-    description: 'SCSSやReactJSを利用し、レスポンシブのWEBデザインのECサイトを作成しています。未完成なので、バックエンドはまだ何もありません。',
-    role: 'フロントエンド',
-    frontend: ['SCSS', 'Ant Design', 'React'],
-    backend: 'なし',
-    source: 'https://github.com/LaPhuocLoc/commerce-app',
-    // preview: 'https://rokku-commerce.netlify.app/',
-    video: 'https://youtu.be/fJ6J75EB3dw',
-    tags: ['react', 'scss', 'responsive', 'ant design', 'ecommerce', 'web app']
-  },
-  {
-    id: 6,
-    thumbUrl: [music1, music2],
-
-    date: '2022年1月11日ー2022年1月17日',
-    title: 'Music Player',
-    description: 'CSSとJavascriptを用いてミュージックプレイヤーアプリを作成しました。',
-    role: 'フロントエンド',
-    frontend: ['CSS', 'Javascript'],
-    backend: 'なし',
-    source: 'https://github.com/LaPhuocLoc/Mp3Player',
-    // preview: 'https://rokku-music.netlify.app/',
-    video: 'https://youtu.be/kvvyQNWTAMQ',
-    tags: ['javascript', 'css', 'ui/ux', 'music app']
-  },
-  {
-    id: 7,
-    thumbUrl: [theater1,theater2,theater3],
-
-    date: '2022年1月17日ー2022年1月19日',
-    title: 'Theater Homepage',
-    description: 'CSSやJavascript,Bootstrapを用いて映画館情報のレスポンシブのWEBサイトを作成しました。',
-    role: 'フロントエンド',
-    frontend: ['CSS', 'Bootstrap', 'Javascript'],
-    backend: 'なし',
-    source: 'https://github.com/LaPhuocLoc/Movie-Theater',
-    // preview: 'https://rokku-theater.netlify.app/',
-    video: 'https://youtu.be/2MY77Glw-3Q',
-    tags: ['css', 'javascript', 'responsive', 'bootstrap', 'movie', 'web design']
+    tags: ['personal']
   },
 
 ]
@@ -126,38 +67,24 @@ const Portfolio = () => {
       <div className="section portfolio mb-3" data-aos="fade-up">
         <PageHeader white='my' yellow='portfolio' titleBg='works' />
         <div className="container">
-          <Tabs className="tab" defaultIndex={3}>
+          <Tabs className="tab" defaultIndex={0}>
             <TabList className="tab__nav">
-              <Tab className="tab__nav-item">CSS/JAVASCRIPT</Tab>
-              <Tab className="tab__nav-item">SCSS/REACT</Tab>
-              <Tab className="tab__nav-item">API使用</Tab>
-              <Tab className="tab__nav-item">ALL</Tab>
+              <Tab className="tab__nav-item">Professional Projects</Tab>
+              <Tab className="tab__nav-item">Personal project</Tab>
             </TabList>
             <TabPanel className="tab__panel">
               {
-                portfolio.filter(item => item.tags.includes('javascript')).map((filteredItem, i) => (
+                portfolio.filter(item => item.tags.includes('personal')).map((filteredItem, i) => (
                   <PortfolioCard item={filteredItem} id={filteredItem.id} key={i} />
                 ))
               }
             </TabPanel>
             <TabPanel className="tab__panel">
               {
-                portfolio.filter(item => item.tags.includes('react')).map((filteredItem, i) => (
+                portfolio.filter(item => item.tags.includes('professional')).map((filteredItem, i) => (
                   <PortfolioCard item={filteredItem} id={filteredItem.id} key={i} />
                 ))
               }
-            </TabPanel>
-            <TabPanel className="tab__panel">
-              {
-                portfolio.filter(item => item.tags.includes('web api')).map((filteredItem, i) => (
-                  <PortfolioCard item={filteredItem} id={filteredItem.id} key={i} />
-                ))
-              }
-            </TabPanel>
-            <TabPanel className="tab__panel">
-              {portfolio.map((item, i) => (
-                <PortfolioCard item={item} id={item.id} key={i} />
-              ))}
             </TabPanel>
           </Tabs>
         </div>

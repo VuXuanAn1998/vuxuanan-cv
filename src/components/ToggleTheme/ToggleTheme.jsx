@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './toggletheme.scss'
 const ToggleTheme = () => {
 
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
   const nextTheme = theme === 'dark' ? 'light' : 'dark'
   const handleTheme = () => {
     setTheme(nextTheme)

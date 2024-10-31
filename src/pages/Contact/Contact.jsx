@@ -59,32 +59,31 @@ const Contact = () => {
         document.querySelector('#modal-2').className = "modal active"
       });
   };
-
   return (
     <>
-      <div className="slide"></div>
+    <div className="slide"></div>
       <div className="section contact" data-aos="fade-up">
         <PageHeader white='get in' yellow='touch' titleBg='contact' />
         <div className="container">
           <div className="row">
             <div className="col col-4">
               <div className="contact-info mb-3">
-                <h3>連絡先</h3>
-                <p>最後までご覧いただきありがとうございました。このサイトを通して、私のことを少しでも知っていただけたのなら嬉しいです。もしこのサイトや私について何かコメントがありましたら、フォームをご利用ください。</p>
+                <h3>Contact Address</h3>
+                <p>Thank you for reading to the end. I hope that you have learned a little about me through this site. If you have any comments about this site or me, please use the form.</p>
                 <ul className="contact-info__list">
                   <li>
                     <div className="icon"><i className='bx bxs-map'></i></div>
-                    <span>現住所</span>
-                    埼玉県草加市
+                    <span>Current address</span>
+                   Ha Noi City
                   </li>
                   <li>
                     <div className="icon"><i className='bx bxs-envelope-open' ></i></div>
-                    <span>メールアドレス</span>
+                    <span>Email Address</span>
                     cxxx150@ccg.ac.jp
                   </li>
                   <li>
                     <div className="icon"><i className='bx bxs-phone-call' ></i></div>
-                    <span>電話番号</span>
+                    <span>Telephone Number</span>
                     <a href="tel:07089592557">07089592xxx</a>
                   </li>
                 </ul>

@@ -51,7 +51,7 @@ const skills = [
 const Skills = () => {
   return (
     <>
-      <h3 className="skill-heading mb-3">スキルシート</h3>
+      <h3 className="skill-heading mb-3">Skills</h3>
       <div className="skill">
         {skills.map((item, i) => (
           <div className="skill-item" key={i} data-aos="fade-up">

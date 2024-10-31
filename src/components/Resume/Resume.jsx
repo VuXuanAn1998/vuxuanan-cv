@@ -34,7 +34,7 @@ const Resume = () => {
   return (
     <>
       <h3 className="resume__heading mb-3">
-        学歴 & 経験
+        Education & Experience
       </h3>
       <div className="resume">
 
